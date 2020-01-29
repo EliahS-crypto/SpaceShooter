@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import at.htlle.shooter.cfg.CfgPropertiesFromFile;
+import at.htlle.shooter.cfg.CfgSingletonfactory;
 import at.htlle.shooter.gameobjects.Asteroid;
 import at.htlle.shooter.gameobjects.Direction;
 import at.htlle.shooter.gameobjects.IScoreable;

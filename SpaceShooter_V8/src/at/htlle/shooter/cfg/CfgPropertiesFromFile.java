@@ -23,12 +23,14 @@ public class CfgPropertiesFromFile implements IGameConfig{
 	public static String EXC_MSG_IO_TEMPLATE = "property file: %s could not be read!";
 	
 	private Map<CfgPropertEnum, Object> propertyMap;
+	public static CfgPropertiesFromFile object = null;
+	private static String propertyFile = "";
 	
 	/**
 	 * Konstuktukor 
 	 * @param propertyFile Name des Property Files (inklusive .properties Endung)
 	 */
-	protected CfgPropertiesFromFile(String propertyFile) {
+	private CfgPropertiesFromFile(String propertyFile) {
 		// https://mkyong.com/java/java-properties-file-examples/
 		try (InputStream ios = new FileInputStream(propertyFile)) {
 			propertyMap = new HashMap<CfgPropertEnum, Object>();
@@ -49,6 +51,16 @@ public class CfgPropertiesFromFile implements IGameConfig{
 			System.out.println(e.getMessage());
 			System.exit(-3);
 		}
+	}
+	public static CfgPropertiesFromFile Singleton() {
+		
+		if(object ==null) {
+			object = new CfgPropertiesFromFile(propertyFile);
+			return object;
+		}else {
+			return object;
+		}
+		
 	}
 	
 	/**
