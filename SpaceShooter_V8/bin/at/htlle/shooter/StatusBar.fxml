@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox fx:id="statusBar" fx:controller="at.htlle.shooter.StatusBarController" minHeight="30.0" minWidth="800.0" prefHeight="30.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="167.0">
+         <children>
+            <Label prefHeight="21.0" prefWidth="51.0" text="Level:" />
+            <Label fx:id="levelValue" text="0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="167.0">
+         <children>
+            <Label prefHeight="21.0" prefWidth="51.0" text="Leben:" />
+            <Label fx:id="lifesValue" text="0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Label prefHeight="21.0" text="Score:">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="scoreValue" text="0" />
+         </children>
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0">
+         <children>
+            <Label prefHeight="21.0" text="FPS:" />
+            <Label fx:id="fpsValue" text="0" />
+         </children>
+      </HBox>
+   </children>
+</HBox>
