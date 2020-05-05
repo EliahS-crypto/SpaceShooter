@@ -21,6 +21,7 @@ public class StatusBarController  {
 	@FXML
 	Label fpsValue;
 	
+	
 
 	public void setScore(int score) {
 		this.scoreValue.setText(Integer.toString(score));

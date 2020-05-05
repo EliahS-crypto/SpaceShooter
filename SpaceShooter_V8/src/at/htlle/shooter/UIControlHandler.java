@@ -117,6 +117,7 @@ public class UIControlHandler implements EventHandler<KeyEvent> {
 			downCursorPressed = isKeyPressed;
 			break;
 
+			
 		case LEFT:
 			leftCursorPressed = isKeyPressed;
 			break;
